@@ -24,16 +24,24 @@ RPSFT/
 
 ## Environment
 
-Create a Python environment with CUDA-capable PyTorch, then install the project
-dependencies. VERL has its own dependency file, so install both sets.
+Create the release environment with Python 3.13. The root `requirements.txt`
+is a curated subset of the local `environment.yml` export: it keeps the
+packages needed for the paper SFT, RLFT, and evaluation paths, strips local
+cluster build tags, and omits system/CUDA/transitive packages from the full
+export. The local `environment.yml` is only a reference file and is ignored by
+git.
 
 ```bash
-conda create -n RPSFT python=3.10 -y
+conda create -n RPSFT python=3.13 -y
 conda activate RPSFT
+pip install --upgrade pip
 pip install -r requirements.txt
-pip install -r verl/requirements.txt
-pip install -e verl
+pip install --no-deps -e verl
 ```
+
+The SFT entrypoint disables FlashAttention by default. If you enable optional
+FlashAttention or additional VERL features outside the paper scripts, install
+the matching CUDA/PyTorch extras separately for your cluster.
 
 Set these environment variables before running cluster jobs:
 
