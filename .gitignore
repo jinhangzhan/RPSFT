@@ -1,0 +1,17 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+*.log
+*.out
+*.err
+slurm-*.out
+wandb/
+slurm_logs/
+hostfile_*
+checkpoints/
+ckpts/
+outputs/
+*.safetensors
+*.bin
+*.pt
+*.pth
