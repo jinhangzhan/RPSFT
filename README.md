@@ -1,5 +1,7 @@
 # RPSFT
 
+Code release for [Rotation-Preserving Supervised Fine-Tuning](https://arxiv.org/abs/2605.10973).
+
 Minimal release artifact for the paper experiments:
 
 - SFT-stage training for vanilla SFT, RPSFT, LoRA, IW-SFT, and DFT.
@@ -128,3 +130,17 @@ sbatch sft/eval/eval_openr1_checkpoint.sbatch.sh \
 For OOD evaluation, pass `ood` and one of the OOD data names, e.g. `gpqa_test`,
 `mmlu_pro`, `ifeval_loose_test`, `safety_benchmark_test`, or
 `truthful_qa_mc_test`.
+
+## Citation
+
+```bibtex
+@misc{jin2026rotationpreservingsupervisedfinetuning,
+      title={Rotation-Preserving Supervised Fine-Tuning},
+      author={Hangzhan Jin and Tianwei Ni and Lu Li and Pierre-Luc Bacon and Mohammad Hamdaqa and Doina Precup},
+      year={2026},
+      eprint={2605.10973},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2605.10973},
+}
+```
