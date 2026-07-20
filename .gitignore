@@ -16,3 +16,4 @@ outputs/
 *.pt
 *.pth
 environment.yml
+.idea/
